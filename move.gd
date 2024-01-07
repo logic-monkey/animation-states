@@ -7,8 +7,10 @@ class_name ST_move
 
 @onready var anim = %AnimationPlayer
 
+
 func enter(previous_state = "", _msg: Dictionary = {}):
 	if previous_state==name: return
+
 	if speed_modes and previous_state in speed_modes:
 		var dist = anim.current_animation_position / anim.current_animation_length
 		anim.play(animation_name)

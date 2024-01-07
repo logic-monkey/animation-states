@@ -3,6 +3,8 @@ class_name ST_idle
 
 @onready var anim = %AnimationPlayer
 
+
+
 func enter(previous_state = "", _msg: Dictionary = {}):
 	if previous_state==name: return
 	pick_idle()
