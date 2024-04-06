@@ -7,6 +7,9 @@ class_name ST_move
 
 @onready var anim = %AnimationPlayer
 
+@export var move_speed_multiplier : float = 1
+@export var maximum_animation_speed : float = 3.0
+@export var minimum_animation_speed : float = 0.25
 
 func enter(previous_state = "", _msg: Dictionary = {}):
 	if previous_state==name: return
@@ -24,12 +27,15 @@ func enter(previous_state = "", _msg: Dictionary = {}):
 	#print("active: %s" % active)
 
 func proc(_delta):
-	pass
+	if "move_speed" in owner and owner.move_speed > 0:
+		var speed = clampf(owner.move_speed * move_speed_multiplier, \
+				minimum_animation_speed, maximum_animation_speed)
+		anim.speed_scale = speed
 	
 func phys(_delta):
 	pass
 
 func exit():
-	pass
+	anim.speed_scale=1
 
 
