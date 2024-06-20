@@ -35,7 +35,7 @@ func proc(_delta):
 func phys(_delta):
 	pass
 
-func exit():
+func exit(_next_state:String=""):
 	anim.speed_scale=1
 
 

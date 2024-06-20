@@ -18,8 +18,6 @@ func proc(_delta):
 func phys(_delta):
 	pass
 
-func exit():
-	pass
 
 @export var idles = ["idle"]
 
