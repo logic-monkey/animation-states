@@ -37,5 +37,3 @@ func phys(_delta):
 
 func exit(_next_state:String=""):
 	anim.speed_scale=1
-
-

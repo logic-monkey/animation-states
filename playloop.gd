@@ -10,5 +10,3 @@ var animation:= "airborn"
 
 func enter(previous_state = "", _msg: Dictionary = {}):
 	anim.play(animation)
-
-
